@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Parallel Testing Suite">
+    <parameter name="browser" value="edge"></parameter>
+    <listeners>
+        <listener class-name="utilities.ExtentReporterNG"/>
+    </listeners>
+
+    <test name="Parallel Tests" parallel="methods" thread-count="1">
+        <packages>
+            <package name="test"/>
+        </packages>
+    </test>
+</suite>
